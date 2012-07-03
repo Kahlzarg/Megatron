@@ -1,0 +1,6 @@
+/*
+progress {background-color:red}
+
+progress::-webkit-progress-bar-value, progress::-webkit-progress-value,
+progress::-moz-progress-bar {background-color:blue}
+*/

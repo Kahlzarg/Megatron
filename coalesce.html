@@ -1,23 +1,73 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
-	name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
-<script type="text/javascript" src='http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js'></script>
-<link type="text/css" href='http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css' rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link type="text/css" href='css/jquerymobile.css' rel="stylesheet">
+	<link type="text/css" href="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.css" rel="stylesheet" /> 
+	<link type="text/css" href='css/page.css' rel="stylesheet">
+	
+	<link type="text/css" href='css/jquery.ui.progressbar.css' rel="stylesheet">
+	<link type="text/css" href='css/page.css' rel="stylesheet">
+
+	<script type="text/javascript" src='js/jquery.js'></script>
+	
+	<script type="text/javascript" src='js/jquery-ui-1.8.21.custom.min.js'></script>
+	
+	<script type="text/javascript" src='js/jquerymobile.js'></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog2.min.js"></script>
+	
+	<script type="text/javascript" src='js/namespaces.js'></script>
+	<script type="text/javascript" src='js/coalesce.js'></script>
+	<script type="text/javascript" src='js/utilities.js'></script>
+	
+	<script>	
+	$(document).delegate('#opendialog', 'click', function() {
+		// NOTE: The selector is the hidden DIV element.
+		$('#popupDialog').simpledialog2();
+		js.Pages.Coalesce.ProgressInit();
+	})
+	</script>
+	
 </head>
-<body>
+<body id="body">
 <div id="page" data-role="page">
 
 	<div id="header" data-role="header">
 		<h1>Coalesce</h1>
 	</div>
 
-	<div id="header" data-role="content">
+	<div id="content" data-role="content">
 	
+		<a href="#popupBasic" data-rel="popup">Open Popup</a>
+	
+		<div data-role="popup" id="popupBasic">
+			<p>This is a completely basic popup, no options set.<p>
+		</div>
+		
+		<br /><br />
+		
+		<a href="#" id="opendialog" data-role="button">Open Dialog</a>
+
+		<div id="popupDialog" style="display:none;"
+		data-options='{"mode":"blank","blankContent":true,"blankContentAdopt":true,"headerText":false,"headerClose":false, "width":"90%"}'>
+		
+			
+			<div id="header" data-role="header">
+			<a rel='close' data-role="button" data-icon="delete" data-iconpos="notext" data-corners="true" data-shadow="true" data-iconshadow="true" title="close"> </a>
+				<h1>Coalesce</h1>
+			</div>
+			
+			
+			<div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+				<div id="progressbar"></div>
+				<a rel='close' data-role='button' href='#'> Close </a>
+			</div>
+		</div>
+
 	</div>
-	
+		
 </div>
 
 </body>

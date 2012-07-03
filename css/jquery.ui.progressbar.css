@@ -1,0 +1,46 @@
+/*!
+ * jQuery UI Progressbar 1.8.21
+ *
+ * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Progressbar#theming
+ */
+.ui-progressbar { background-color:#dde; height:2.25em; text-align: left; overflow: hidden; }
+.ui-progressbar .ui-progressbar-value {background-color:#889; margin: -1px; height:100%; }
+
+.ui-progressbar {
+	-moz-border-radius: 				1em /*{global-radii-buttons}*/;
+	-webkit-border-radius: 				1em /*{global-radii-buttons}*/;
+	border-radius: 						1em /*{global-radii-buttons}*/;
+	border: 0px solid 		#333 /*{e-bar-border}*/;
+	background: 			#ddd /*{e-bar-background-color}*/;
+	color: 					#333 /*{e-bar-color}*/;
+	text-shadow: 0 /*{e-bar-shadow-x}*/ 1px /*{e-bar-shadow-y}*/ 0 /*{e-bar-shadow-radius}*/ 	#fff /*{e-bar-shadow-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #eee /*{e-bar-background-start}*/), to( #ccc /*{e-bar-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #eee /*{e-bar-background-start}*/, #ccc /*{e-bar-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #eee /*{e-bar-background-start}*/, #ccc /*{e-bar-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #eee /*{e-bar-background-start}*/, #ccc /*{e-bar-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #eee /*{e-bar-background-start}*/, #ccc /*{e-bar-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #eee /*{e-bar-background-start}*/, #ccc /*{e-bar-background-end}*/);
+	-moz-box-shadow: 0px 1px 4px /*{global-box-shadow-size}*/ 			rgba(0,0,0,.3) /*{global-box-shadow-color}*/;
+	-webkit-box-shadow: 0px 1px 4px /*{global-box-shadow-size}*/ 		rgba(0,0,0,.3) /*{global-box-shadow-color}*/;
+	box-shadow: 0px 1px 4px /*{global-box-shadow-size}*/ 				rgba(0,0,0,.3) /*{global-box-shadow-color}*/;
+}
+
+.ui-progressbar-value {
+	-moz-border-radius: 				1em /*{global-radii-buttons}*/;
+	-webkit-border-radius: 				1em /*{global-radii-buttons}*/;
+	border-radius: 						1em /*{global-radii-buttons}*/;
+	border: 0px solid 		#333 /*{e-bar-border}*/;
+	background: 			#aab /*{e-bar-background-color}*/;
+	color: 					#6a6 /*{e-bar-color}*/;
+	text-shadow: 0 /*{e-bar-shadow-x}*/ 1px /*{e-bar-shadow-y}*/ 0 /*{e-bar-shadow-radius}*/ 	#fff /*{e-bar-shadow-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #5f5 /*{e-bar-background-start}*/), to( #6a6 /*{e-bar-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #5f5 /*{e-bar-background-start}*/, #6a6 /*{e-bar-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #5f5 /*{e-bar-background-start}*/, #6a6 /*{e-bar-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #5f5 /*{e-bar-background-start}*/, #6a6 /*{e-bar-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #5f5 /*{e-bar-background-start}*/, #6a6 /*{e-bar-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #5f5 /*{e-bar-background-start}*/, #6a6 /*{e-bar-background-end}*/);
+}
