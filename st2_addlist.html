@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+
+<script type="text/javascript" src='js/sencha-touch-all.js'></script>
+<link type="text/css" href='css/sencha-touch.css' rel="stylesheet">
+
+<script type="text/javascript"> 
+ 
+    Ext.application({
+        launch: function () {
+        	/*
+            Ext.create('Ext.Panel', {
+                fullscreen: true,
+                html: 'Hello World!'
+            });
+            */
+            
+            var myStore = Ext.create('Ext.data.Store', {
+                storeId: 'MyStore',
+                fields: ['txt']
+            }); // create()
+            
+            Ext.create('Ext.List', {
+                fullscreen: true,
+                store: 'MyStore',
+                itemTpl: '{txt}',
+                items: [{
+                    xtype: 'titlebar',
+                    docked: 'top',
+                    items: [{
+                        text: 'Add item',
+                        handler: function () {
+                            var now = new Date(),
+                                value = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+                            myStore.add({txt: value});
+                        } // handler
+                    }] // items (titlebar)
+                }] // items (list)
+            }); // create()
+        } // launch
+    }); //application
+ 
+</script>
+		
+</head>
+<body id="body">
+
+</body>
+</html>

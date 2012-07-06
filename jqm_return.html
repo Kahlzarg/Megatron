@@ -21,50 +21,20 @@
 	<script type="text/javascript" src='js/namespaces.js'></script>
 	<script type="text/javascript" src='js/coalesce.js'></script>
 	<script type="text/javascript" src='js/utilities.js'></script>
-	
-	<script>	
-	$(document).delegate('#opendialog', 'click', function() {
-		// NOTE: The selector is the hidden DIV element.
-		$('#popupDialog').simpledialog2();
-		js.Pages.Coalesce.ProgressInit();
-	})
-	</script>
-	
+		
 </head>
 <body id="body">
 <div id="page" data-role="page">
 
 	<div id="header" data-role="header">
-		<h1>Coalesce</h1>
+		<h1>Return</h1>
 	</div>
 
 	<div id="content" data-role="content">
-	
-		<a href="#popupBasic" data-rel="popup">Open Popup</a>
-	
-		<div data-role="popup" id="popupBasic">
-			<p>This is a completely basic popup, no options set.<p>
-		</div>
-		
-		<br /><br />
-		
-		<a href="#" id="opendialog" data-role="button">Open Dialog</a>
 
-		<div id="popupDialog" style="display:none;"
-		data-options='{"mode":"blank","blankContent":true,"blankContentAdopt":true,"headerText":false,"headerClose":false, "width":"90%"}'>
-		
 			
-			<div id="header" data-role="header">
-			<a rel='close' data-role="button" data-icon="delete" data-iconpos="notext" data-corners="true" data-shadow="true" data-iconshadow="true" title="close"> </a>
-				<h1>Coalesce</h1>
-			</div>
-			
-			
-			<div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
-				<div id="progressbar"></div>
-				<a rel='close' data-role='button' href='#'> Close </a>
-			</div>
-		</div>
+	<a href="jqm_index.html" data-transition="none" data-role="button">Return to Main Page</a>
+	
 
 	</div>
 		
